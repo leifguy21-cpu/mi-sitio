@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiFi: conceptos, tipos y casos prácticos</title>
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Tipografías requeridas por la guía (básico) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <img class="encabezado-logo" src="wifi_logo_preview.png" alt="Logo de WiFi" width="110">
+        <div class="encabezado-texto">
+            <h1>WiFi: cómo funciona, tipos y aplicaciones reales</h1>
+            <p><strong>Nombre:</strong> Leif Florez Vásquez</p>
+        </div>
+    </header>
+
+    <main class="contenido-principal">
+        <!-- SECCIÓN DE PRESENTACIÓN -->
+        <section class="seccion presentacion" id="presentacion" aria-labelledby="presentacion-titulo">
+            <h2 id="presentacion-titulo">El corazón de nuestro hogar digital: El WiFi</h2>
+            <figure class="figura">
+                <img src="wifi.webp" alt="Señal WiFi conectando varios dispositivos en un hogar" class="imagen-principal" width="800" height="450">
+                <figcaption class="pie-foto">Figura 1. Red WiFi doméstica: múltiples equipos comparten el mismo punto de acceso.</figcaption>
+            </figure>
+        </section>
+
+        <!-- Introducción: importancia general -->
+        <section class="seccion" id="introduccion" aria-labelledby="introduccion-titulo">
+            <h2 id="introduccion-titulo">Introducción</h2>
+            <p>
+                En términos simples, el WiFi crea un enlace de datos usando ondas de radio. Un punto de acceso (AP),
+                normalmente integrado en el router, “publica” una red y los clientes se asocian para intercambiar tráfico.
+                Por debajo, se aplican mecanismos de modulación, control de canal, corrección de errores y cifrado.
+            </p>
+            <p>
+                ¿Por qué es importante? Porque reduce costos de instalación, aporta movilidad y permite escalar el número
+                de dispositivos conectados. Además, es una pieza clave para servicios modernos: streaming, videollamadas,
+                educación virtual, IoT y trabajo híbrido. Sin WiFi, dependeríamos de cableado fijo, lo que limita el acceso
+                y hace menos flexible cualquier entorno digital.
+            </p>
+        </section>
+
+        <!-- Desarrollo / Contenido: subtemas, conceptos clave, ventajas/desventajas, componentes/herramientas, 1 imagen -->
+        <section class="seccion" id="desarrollo" aria-labelledby="desarrollo-titulo">
+            <h2 id="desarrollo-titulo">Desarrollo / Contenido</h2>
+
+            <h3>Origen del WiFi</h3>
+            <p>
+                El WiFi surge de la necesidad de estandarizar redes inalámbricas de área local (WLAN). Aunque existen
+                antecedentes de investigación en radiofrecuencia durante el siglo XX, el punto decisivo fue la creación
+                de un estándar abierto que permitiera interoperabilidad entre fabricantes. IEEE publicó versiones tempranas
+                de 802.11 en los años noventa, definiendo cómo se transmite información por aire usando bandas libres
+                (principalmente 2.4 GHz y 5 GHz), con reglas para compartir el canal y evitar colisiones.
+            </p>
+            <p>
+                A finales de los 90 se consolidó el ecosistema con certificaciones de compatibilidad. En 1999 nació la
+                Wi-Fi Alliance (originalmente WECA) para validar que routers y tarjetas de red de diferentes marcas
+                funcionaran bien entre sí. Esto fue clave: sin certificación, cada fabricante habría implementado “su propio”
+                WiFi y el usuario final tendría conexiones inestables o incompatibles.
+            </p>
+            <p>
+                Con el tiempo aparecieron mejoras importantes: más velocidad, mejor eficiencia y mejor manejo de múltiples
+                usuarios. Pasamos de 802.11b/g a 802.11n (MIMO), 802.11ac (canales más amplios y mayor rendimiento) y 802.11ax
+                o WiFi 6 (OFDMA y mejor eficiencia en entornos congestionados). El objetivo dejó de ser solo “más megas” y se
+                volvió “más estabilidad con muchos dispositivos conectados”.
+            </p>
+
+            <h3>Conceptos clave: cómo se conecta un dispositivo</h3>
+            <p>
+                Cuando un dispositivo se conecta, realiza un proceso de descubrimiento y asociación: detecta el SSID (nombre
+                de red), negocia parámetros con el punto de acceso, y si la red está protegida, ejecuta autenticación y
+                establecimiento de claves. Con WPA2/WPA3, el cifrado protege la confidencialidad del tráfico y reduce riesgos
+                de acceso no autorizado. A nivel práctico, una mala configuración (clave débil, firmware desactualizado o
+                redes abiertas) afecta la seguridad más que la tecnología en sí.
+            </p>
+
+            <h3>Ventajas y desventajas</h3>
+            <h4>Ventajas</h4>
+            <ul>
+                <li><strong>Movilidad:</strong> conexión sin depender de un punto físico con cable.</li>
+                <li><strong>Escalabilidad:</strong> es fácil sumar nuevos equipos a la red.</li>
+                <li><strong>Costos:</strong> menos cableado y menos tiempo de instalación.</li>
+                <li><strong>Flexibilidad:</strong> útil para hogares, empresas, aulas y eventos.</li>
+            </ul>
+
+            <h4>Desventajas</h4>
+            <ul>
+                <li><strong>Interferencias:</strong> otras redes o equipos pueden degradar la señal.</li>
+                <li><strong>Alcance variable:</strong> paredes y materiales atenúan la potencia.</li>
+                <li><strong>Rendimiento fluctuante:</strong> el medio es compartido entre usuarios.</li>
+                <li><strong>Riesgos de seguridad:</strong> depende de cifrado y buenas prácticas.</li>
+            </ul>
+
+            <h3>Componentes y herramientas típicas</h3>
+            <ul>
+                <li><strong>Router / Punto de acceso (AP):</strong> emite la red y gestiona asociaciones.</li>
+                <li><strong>Cliente WiFi:</strong> tarjeta o chip (laptop, móvil, TV, IoT).</li>
+                <li><strong>Canales y bandas:</strong> 2.4 GHz (mejor alcance) y 5 GHz (más capacidad).</li>
+                <li><strong>Seguridad:</strong> WPA2/WPA3, segmentación (red invitados), y contraseñas robustas.</li>
+                <li><strong>Herramientas:</strong> análisis de canal (congestión), pruebas de velocidad y mapas de cobertura.</li>
+            </ul>
+
+            <figure class="figura">
+                <img src="wifi2.webp" alt="Router emitiendo señal y un portátil recibiendo la red" class="imagen-apoyo" width="800" height="450">
+                <figcaption class="pie-foto">Figura 2. Punto de acceso y cliente: el medio es compartido y depende del entorno.</figcaption>
+            </figure>
+        </section>
+
+        <!-- Tabla requerida: mantener tabla de proveedores -->
+        <section class="seccion" id="proveedores" aria-labelledby="proveedores-titulo">
+            <h2 id="proveedores-titulo">Tabla: proveedores (referencia)</h2>
+            <p>
+                En el hogar, la experiencia WiFi depende tanto del proveedor (calidad del enlace a Internet) como del equipo
+                interno (router/AP, ubicación y configuración). Esta tabla resume ejemplos comunes de servicio.
+            </p>
+            <table>
+                <tr>
+                    <th>Proveedor</th>
+                    <th>Tipo de servicio</th>
+                    <th>Cobertura</th>
+                </tr>
+                <tr>
+                    <td>Claro</td>
+                    <td>Fibra óptica</td>
+                    <td>Nacional</td>
+                </tr>
+                <tr>
+                    <td>Movistar</td>
+                    <td>Fibra óptica</td>
+                    <td>Principales ciudades</td>
+                </tr>
+                <tr>
+                    <td>Tigo</td>
+                    <td>Internet hogar</td>
+                    <td>Regional</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Tipos de WiFi: ampliar con lenguaje técnico claro -->
+        <section class="seccion" id="tipos" aria-labelledby="tipos-titulo">
+            <h2 id="tipos-titulo">Tipos de WiFi</h2>
+            <p>
+                Cuando se habla de “tipos de WiFi”, en realidad se mezclan dos criterios: <strong>bandas de frecuencia</strong>
+                (2.4/5/6 GHz) y <strong>generaciones del estándar 802.11</strong> (WiFi 4/5/6/6E/7). Ambos afectan cobertura,
+                velocidad y estabilidad, y explican por qué un router moderno puede rendir diferente según el lugar.
+            </p>
+            <ol>
+                <li>
+                    <strong>WiFi 2.4 GHz</strong>
+                    <p>
+                        Tiene mejor alcance y atraviesa paredes con más facilidad, pero suele estar más congestionado.
+                        Comparte espectro con Bluetooth, algunos dispositivos IoT y otros equipos. Es una banda útil para
+                        distancias medias y dispositivos de bajo consumo, aunque puede sufrir interferencias y menos
+                        capacidad total.
+                    </p>
+                </li>
+                <li>
+                    <strong>WiFi 5 GHz</strong>
+                    <p>
+                        Ofrece mayor capacidad y, típicamente, mejor rendimiento para streaming, videojuegos y videollamadas,
+                        especialmente cerca del punto de acceso. La desventaja es que su alcance efectivo es menor que en 2.4 GHz,
+                        por lo que conviene en espacios abiertos o con buena ubicación del router.
+                    </p>
+                </li>
+                <li>
+                    <strong>WiFi 6 / 6E (802.11ax)</strong>
+                    <p>
+                        Se enfoca en eficiencia en escenarios con muchos clientes. Tecnologías como <em>OFDMA</em> y mejoras en
+                        <em>MIMO</em> ayudan a reducir latencia y administrar mejor el canal. En 6E se habilita el uso de la banda
+                        de 6 GHz (donde está disponible), ofreciendo más canales y menos interferencia, ideal para entornos urbanos
+                        saturados.
+                    </p>
+                </li>
+                <li>
+                    <strong>WiFi 7 (802.11be)</strong>
+                    <p>
+                        Apunta a mayor ancho de banda agregado y mejor consistencia para tareas exigentes (realidad aumentada,
+                        contenido 4K/8K, y redes domésticas con muchos equipos). Más allá del “número”, la idea es optimizar cómo
+                        se usa el espectro para entregar rendimiento más predecible.
+                    </p>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Ejemplos / Casos prácticos: 1 imagen -->
+        <section class="seccion" id="casos-practicos" aria-labelledby="casos-titulo">
+            <h2 id="casos-titulo">Ejemplos o casos prácticos</h2>
+            <p>
+                Los casos prácticos muestran que el WiFi no es “solo Internet”, sino una infraestructura local con requisitos
+                distintos según el uso. Un buen diseño considera ubicación del AP, congestión, seguridad y segmentación.
+            </p>
+            <ul>
+                <li>
+                    <strong>Hogar (teletrabajo y streaming):</strong> lo ideal es separar una red principal y una de invitados,
+                    usar WPA2/WPA3 y ubicar el router en una zona central. Si hay zonas muertas, un sistema mesh puede mejorar
+                    cobertura sin depender de un solo punto.
+                </li>
+                <li>
+                    <strong>Empresa (múltiples usuarios):</strong> se prioriza capacidad y control. Es común usar varios AP,
+                    controladora (o gestión en la nube), VLAN por perfiles (administración, invitados, IoT) y políticas de acceso.
+                    Aquí la “eficiencia con muchos clientes” es más importante que una velocidad máxima teórica.
+                </li>
+                <li>
+                    <strong>Educación (aulas y campus):</strong> muchas conexiones simultáneas requieren planificación de canales
+                    y potencia para evitar interferencia entre aulas. Se busca estabilidad para plataformas de evaluación, clases
+                    por videollamada y recursos digitales.
+                </li>
+                <li>
+                    <strong>IoT (sensores y domótica):</strong> muchos dispositivos usan 2.4 GHz por alcance. Es recomendable una
+                    red separada, contraseñas fuertes y mantener firmware actualizado para minimizar vulnerabilidades.
+                </li>
+            </ul>
+            <figure class="figura">
+                <img src="wifialiance.png" alt="Certificación e interoperabilidad en equipos WiFi" class="imagen-apoyo" width="800" height="450">
+                <figcaption class="pie-foto">Figura 3. Certificación e interoperabilidad: clave para que diferentes marcas funcionen juntas.</figcaption>
+            </figure>
+        </section>
+
+        <!-- Conclusiones -->
+        <section class="seccion seccion-final" id="conclusiones" aria-labelledby="conclusiones-titulo">
+            <h2 id="conclusiones-titulo">Conclusiones</h2>
+            <p>
+                El WiFi es una tecnología fundamental para la conectividad moderna porque combina movilidad, facilidad de
+                despliegue y compatibilidad entre dispositivos. Su evolución (WiFi 5, 6/6E y 7) no solo aumenta velocidad,
+                también mejora eficiencia y experiencia en entornos con alta densidad de usuarios.
+            </p>
+            <p>
+                En la industria actual, entender bandas, congestión, seguridad y diseño de cobertura marca la diferencia entre
+                una red “que a veces funciona” y una red estable. Con buenas prácticas (cifrado, segmentación, ubicación del AP y
+                actualización de firmware), el WiFi puede ofrecer rendimiento confiable tanto en casa como en organizaciones.
+            </p>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <p>Derechos reservados © 2026 | Leif Florez Vásquez</p>
+    </footer>
+
+</body>
+</html>
